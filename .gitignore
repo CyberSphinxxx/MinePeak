@@ -1,0 +1,46 @@
+# Local MinePeak environment & outputs
+.tools/
+.runtime/
+dist/
+
+# .NET / C# build outputs & artifacts
+**/bin/
+**/obj/
+**/artifacts/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+vendor/PeakCraft/peak/Config.Build.user.props
+
+# Gradle / Java / Fabric
+**/.gradle/
+**/build/
+**/run/
+**/.fabric/
+
+# Python cache (tools)
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE & editors
+.vs/
+.idea/
+.vscode/
+*.DotSettings.user
+*.sln.iml
+
+# Logs and crash dumps
+*.log
+logs/
+crash-reports/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
