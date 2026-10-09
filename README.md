@@ -186,18 +186,18 @@ stateDiagram-v2
 
 ```mermaid
 sequenceDiagram
-    participant U as Player / F6
+    participant U as Player (F6)
     participant P as PEAK ownership
     participant M as Minecraft client
     participant S as Integrated server
     U->>P: Request Minecraft controls
-    P->>P: Enter Handoff; increment teleportSeq
+    P->>P: Enter Handoff, increment teleportSeq
     P->>M: Host pose + teleportSeq + collisionEpoch
-    M->>M: Mark teleport pending; hold player
+    M->>M: Mark teleport pending, hold player
     M->>S: Teleport authoritative server player
     M->>M: Wait for known collision near target
     M->>P: Publish matching teleportAck when released
-    P->>P: Enter MinecraftOwns; take kinematic follower
+    P->>P: Enter MinecraftOwns, take kinematic follower
     Note over P,M: A replacement LocalPlayer invalidates the old ack before rendering
 ```
 
