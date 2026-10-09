@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "skycraft",
+  "version": "${version}",
+  "name": "MinePeak Minecraft Bridge",
+  "description": "Real Minecraft physics, building, inventory and viewmodels in PEAK. Adapted from SkyCraft and PeakCraft.",
+  "authors": ["chasmlol"],
+  "contact": {
+    "sources": "https://github.com/chasmlol/SkyCraft"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "main": ["dev.skycraft.SkyCraft"],
+    "client": ["dev.skycraft.client.SkyCraftClient"]
+  },
+  "mixins": [
+    "skycraft.mixins.json",
+    { "config": "skycraft.client.mixins.json", "environment": "client" }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
